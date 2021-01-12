@@ -1214,6 +1214,11 @@ spec:
       nodeSelector:
         kubernetes.io/arch: amd64
         kubernetes.io/os: linux
+      tolerations:
+      - effect: NoExecute
+        key: pci-scope
+        operator: Equal
+        value: out-of-scope
       securityContext:
         fsGroup: 1337
       terminationGracePeriodSeconds: 60
@@ -1291,6 +1296,11 @@ spec:
       nodeSelector:
         kubernetes.io/arch: amd64
         kubernetes.io/os: linux
+      tolerations:
+      - effect: NoExecute
+        key: pci-scope
+        operator: Equal
+        value: out-of-scope
       terminationGracePeriodSeconds: 10
       volumes:
       - emptyDir: {}
