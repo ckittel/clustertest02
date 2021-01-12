@@ -1173,7 +1173,7 @@ spec:
       - args:
         - --watch-all-namespaces=true
         - --log-level=debug
-        - --log-json
+        - --log-encoding=json
         - --enable-leader-election
         env:
         - name: RUNTIME_NAMESPACE
@@ -1252,7 +1252,7 @@ spec:
       - args:
         - --watch-all-namespaces=true
         - --log-level=debug
-        - --log-json
+        - --log-encoding=json
         - --enable-leader-election
         - --storage-path=/data
         - --storage-adv-addr=source-controller.$(RUNTIME_NAMESPACE).svc.cluster.local.
