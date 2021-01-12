@@ -1171,9 +1171,8 @@ spec:
     spec:
       containers:
       - args:
-        - --events-addr=
         - --watch-all-namespaces=true
-        - --log-level=info
+        - --log-level=debug
         - --log-json
         - --enable-leader-election
         env:
@@ -1251,9 +1250,8 @@ spec:
     spec:
       containers:
       - args:
-        - --events-addr=
         - --watch-all-namespaces=true
-        - --log-level=info
+        - --log-level=debug
         - --log-json
         - --enable-leader-election
         - --storage-path=/data
