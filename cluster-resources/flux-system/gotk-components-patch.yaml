@@ -13,19 +13,3 @@ spec:
         key: pci-scope
         operator: Equal
         value: out-of-scope
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: source-controller
-  namespace: flux-system
-spec:
-  template:
-    spec:
-      nodeSelector:
-        pci-scope: out-of-scope
-      tolerations:
-      - effect: NoExecute
-        key: pci-scope
-        operator: Equal
-        value: out-of-scope
