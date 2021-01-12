@@ -1214,6 +1214,7 @@ spec:
       nodeSelector:
         kubernetes.io/arch: amd64
         kubernetes.io/os: linux
+        pci-scope: out-of-scope
       tolerations:
       - effect: NoExecute
         key: pci-scope
@@ -1296,6 +1297,7 @@ spec:
       nodeSelector:
         kubernetes.io/arch: amd64
         kubernetes.io/os: linux
+        pci-scope: out-of-scope
       tolerations:
       - effect: NoExecute
         key: pci-scope
