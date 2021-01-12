@@ -7,9 +7,9 @@ spec:
   template:
     metadata:
       annotations:
-        custom: annotation
+        custom: annotation2
       labels:
-        custom: label
+        custom: label2
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -20,6 +20,6 @@ spec:
   template:
     metadata:
       annotations:
-        custom: annotation
+        custom: annotation2
       labels:
-        custom: label
+        custom: label2
