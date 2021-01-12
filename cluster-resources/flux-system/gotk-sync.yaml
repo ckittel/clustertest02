@@ -5,11 +5,9 @@ metadata:
   name: flux-system
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 30s
   ref:
     branch: main
-  secretRef:
-    name: flux-system
   url: https://github.com/ckittel/clustertest02
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
@@ -18,7 +16,7 @@ metadata:
   name: flux-system
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 1m0s
   path: ./cluster-resources
   prune: true
   sourceRef:
