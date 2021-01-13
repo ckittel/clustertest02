@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-ingress-to-sources-from-kustomize
+  name: allow-ingress-from-kustomize
   namespace: flux-system
 spec:
   podSelector:
@@ -18,7 +18,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-egress-from-kustomize-to-sources
+  name: allow-egress-to-sources
   namespace: flux-system
 spec:
   podSelector:
@@ -35,7 +35,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-egress-from-kustomize-to-dns
+  name: allow-egress-to-dns
   namespace: flux-system
 spec:
   podSelector:
