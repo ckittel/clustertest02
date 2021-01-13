@@ -35,9 +35,25 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: default-deny-ingress-egress
+  name: allow-egress-from-kustomize-to-dns
+  namespace: flux-system
+spec:
+  podSelector:
+    matchLabels:
+      app: kustomize-controller
+  policyTypes:
+  - Egress
+  egress:
+  - to:
+    - ports:
+      - port: 53
+        protocol: UDP
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-ingress
 spec:
   podSelector: {}
   policyTypes:
   - Ingress
-  - Egress
